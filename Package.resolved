@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SFSymbols",
+        "repositoryURL": "https://github.com/Rspoon3/SFSymbols.git",
+        "state": {
+          "branch": null,
+          "revision": "5f5b1d98d686d0882fc4178e3bfcc3e25b6e1516",
+          "version": "1.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
