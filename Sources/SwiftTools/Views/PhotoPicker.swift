@@ -10,12 +10,14 @@ import PhotosUI
 
 @available(iOS 14.0, *)
 public struct PhotoPicker: UIViewControllerRepresentable {
+    @Environment(\.presentationMode) var presentationMode
+
     public let configuration: PHPickerConfiguration
-    @Binding public var results: [PHPickerResult]
+    let handler: ([PHPickerResult]) -> Void
     
-    public init(configuration: PHPickerConfiguration, results: Binding<[PHPickerResult]>){
+    public init(configuration: PHPickerConfiguration, handler: @escaping ([PHPickerResult]) -> Void){
         self.configuration = configuration
-        self._results = results
+        self.handler = handler
     }
     
     public func makeUIViewController(context: UIViewControllerRepresentableContext<PhotoPicker>) -> PHPickerViewController {
@@ -39,8 +41,8 @@ public struct PhotoPicker: UIViewControllerRepresentable {
         }
         
         public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            picker.dismiss(animated: true)
-            parent.results = results
-        }
+            parent.handler(results)
+            parent.presentationMode.wrappedValue.dismiss()
+        }  
     }
 }

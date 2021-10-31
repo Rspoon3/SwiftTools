@@ -8,21 +8,18 @@
 import Foundation
 
 
-@available(iOS 15.0.0, *)
 public extension NSItemProvider{
-    func loadObjectAsync(ofClass type: NSItemProviderReading.Type) async throws -> NSItemProviderReading{
+    
+    @available(iOS 15.0.0, *)
+    func loadObject<T: NSItemProviderReading>(ofClass type: T.Type) async throws -> T{
         return try await withCheckedThrowingContinuation { continuation in
-            loadObject(ofClass: type) { item, error in
-                print("In here")
+            loadObject(ofClass: type) { (nsItemProviderReading, error) in
                 if let error = error{
-                    print("Error: \(error.localizedDescription)")
                     continuation.resume(throwing: error)
-                } else if let item = item{
-                    print("Resuming")
-                    continuation.resume(returning: item)
+                } else if let type = nsItemProviderReading as? T {
+                    continuation.resume(returning: type)
                 } else {
                     let error = NSError(domain: "Unknown NSItemProviderReading Error", code: -1, userInfo: [:])
-                    print("Error 2: \(error.localizedDescription)")
                     continuation.resume(throwing: error)
                 }
             }
