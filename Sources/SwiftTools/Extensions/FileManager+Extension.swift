@@ -20,17 +20,17 @@ public extension FileManager{
         return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first! as URL
     }
     
-    static func filePathInDocumentsDirecotry(fileName: String)->URL{
+    static func filePathInDocumentsDirectory(fileName: String)->URL{
         return FileManager.documentsDirectory.appendingPathComponent(fileName)
     }
     
     static func fileExistsInDocumentsDirectory(fileName: String)-> Bool{
-        let path = filePathInDocumentsDirecotry(fileName: fileName).path
+        let path = filePathInDocumentsDirectory(fileName: fileName).path
         return FileManager.default.fileExists(atPath: path)
     }
     
     static func deleteFileInDocumentsDirectory(fileName: String){
-        let path = filePathInDocumentsDirecotry(fileName: fileName).path
+        let path = filePathInDocumentsDirectory(fileName: fileName).path
         do {
             try FileManager.default.removeItem(atPath: path)
             print("FILE: \(path) was deleted!")
