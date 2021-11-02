@@ -130,22 +130,22 @@ public struct SearchBar: UIViewRepresentable{
     }
 }
 
-struct SearchBar_Previews: PreviewProvider {
-    
-    struct Container: View{
-        @State private var textOne = String()
-        
-        var body: some View{
-            VStack{
-                SearchBar(text: $textOne, placeholder: "Search")
-            }
-        }
-    }
-    
-    static var previews: some View {
-        Container()
-            .padding()
-            .previewLayout(.sizeThatFits)
-            .previewDisplayName(".sizeThatFits")
-    }
-}
+//struct SearchBar_Previews: PreviewProvider {
+//    
+//    struct Container: View{
+//        @State private var textOne = String()
+//        
+//        var body: some View{
+//            VStack{
+//                SearchBar(text: $textOne, placeholder: "Search")
+//            }
+//        }
+//    }
+//    
+//    static var previews: some View {
+//        Container()
+//            .padding()
+//            .previewLayout(.sizeThatFits)
+//            .previewDisplayName(".sizeThatFits")
+//    }
+//}

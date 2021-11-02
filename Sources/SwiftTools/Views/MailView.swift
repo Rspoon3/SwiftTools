@@ -129,13 +129,13 @@ public struct MailView: UIViewControllerRepresentable {
 }
 
 
-struct MailView_Previews: PreviewProvider {
-    static var previews: some View {
-        MailView(recipients: nil,
-                 subject: "Feedback",
-                 message: nil,
-                 attachments: nil){ result in
-            
-        }
-    }
-}
+//struct MailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MailView(recipients: nil,
+//                 subject: "Feedback",
+//                 message: nil,
+//                 attachments: nil){ result in
+//            
+//        }
+//    }
+//}

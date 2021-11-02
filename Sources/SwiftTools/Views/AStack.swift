@@ -34,27 +34,27 @@ public struct AStack<Content: View>: View {
 }
 
 
-struct AStack_Previews: PreviewProvider {
-    struct Container: View{
-        @State private var isVertical = true
-        
-        var body: some View{
-            VStack{
-                Button("Toggle Rotation"){
-                    isVertical.toggle()
-                }
-                AStack(isVertical: isVertical, spacing: 0){
-                    Color.blue
-                    Color.red
-                }
-            }
-        }
-    }
-    
-    static var previews: some View {
-        Container()
-            .padding()
-            .frame(width: 200, height: 200)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct AStack_Previews: PreviewProvider {
+//    struct Container: View{
+//        @State private var isVertical = true
+//        
+//        var body: some View{
+//            VStack{
+//                Button("Toggle Rotation"){
+//                    isVertical.toggle()
+//                }
+//                AStack(isVertical: isVertical, spacing: 0){
+//                    Color.blue
+//                    Color.red
+//                }
+//            }
+//        }
+//    }
+//    
+//    static var previews: some View {
+//        Container()
+//            .padding()
+//            .frame(width: 200, height: 200)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

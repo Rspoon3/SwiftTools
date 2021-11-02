@@ -22,9 +22,9 @@ public struct CopyButton: View {
     }
 }
 
-@available(iOS 14.0, *)
-struct CopyButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CopyButton(text: "This is the sentence too copy to the pasteboard.")
-    }
-}
+//@available(iOS 14.0, *)
+//struct CopyButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CopyButton(text: "This is the sentence too copy to the pasteboard.")
+//    }
+//}

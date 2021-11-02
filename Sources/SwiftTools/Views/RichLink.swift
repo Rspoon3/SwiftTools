@@ -30,11 +30,11 @@ public struct RichLinkView: UIViewRepresentable {
     }
 }
 
-struct RichLink_Previews: PreviewProvider {
-    static var previews: some View {
-        RichLinkView(richLink: .previewData)
-    }
-}
+//struct RichLink_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RichLinkView(richLink: .previewData)
+//    }
+//}
 
 
 public class RichLink: NSObject, NSSecureCoding, Identifiable {
