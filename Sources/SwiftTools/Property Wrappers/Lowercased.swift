@@ -8,14 +8,15 @@
 import Foundation
 
 
-@propertyWrapper struct Lowercased {
-    var wrappedValue: String {
+@propertyWrapper
+public struct Lowercased {
+    public var wrappedValue: String {
         didSet {
             wrappedValue = wrappedValue.lowercased()
         }
     }
     
-    init(wrappedValue: String) {
+    public init(wrappedValue: String) {
         self.wrappedValue = wrappedValue.lowercased()
     }
 }
