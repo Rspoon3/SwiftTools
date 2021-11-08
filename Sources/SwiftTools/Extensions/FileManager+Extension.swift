@@ -12,16 +12,17 @@ public extension FileManager{
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as URL
     }
     
-    static var tempDirectory : String{
-        return NSTemporaryDirectory()
-    }
-    
     static var cachesDirectory : URL{
         return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first! as URL
     }
     
     static func filePathInDocumentsDirectory(fileName: String)->URL{
         return FileManager.documentsDirectory.appendingPathComponent(fileName)
+    }
+    
+    static func filePathInTemporaryDirectory(fileName: String)->URL{
+        let temporaryDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+        return temporaryDirectoryURL.appendingPathComponent(fileName)
     }
     
     static func fileExistsInDocumentsDirectory(fileName: String)-> Bool{
