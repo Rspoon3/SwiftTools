@@ -8,7 +8,7 @@
 import SwiftUI
 
 ///Adds the icon to the trailing edge of the view with a large image scale
-///- Author: Richard Witherspoon
+///- Authors: Richard Witherspoon
 @available(iOS 14.0, *)
 public struct BadgeIconLabelStyle: LabelStyle {
     public func makeBody(configuration: Configuration) -> some View {
@@ -23,7 +23,7 @@ public struct BadgeIconLabelStyle: LabelStyle {
 
 
 ///Adds the icon to the trailing edge of the view with a large image scale
-///- Author: Richard Witherspoon
+///- Authors: Richard Witherspoon
 @available(iOS 14.0, *)
 public extension LabelStyle where Self == BadgeIconLabelStyle {
     static var badge: BadgeIconLabelStyle {
