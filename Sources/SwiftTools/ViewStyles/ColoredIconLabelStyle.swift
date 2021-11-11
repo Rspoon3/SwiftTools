@@ -14,6 +14,10 @@ import SwiftUI
 public struct ColoredIconLabelStyle: LabelStyle {
     let color: Color
     
+    init(_ color: Color){
+        self.color = color
+    }
+    
     public func makeBody(configuration: Configuration) -> some View {
         Label {
             configuration.title
@@ -30,6 +34,6 @@ public struct ColoredIconLabelStyle: LabelStyle {
 @available(iOS 14.0, *)
 public extension LabelStyle where Self == ColoredIconLabelStyle {
     static func coloredIcon(_ color: Color) -> ColoredIconLabelStyle {
-        ColoredIconLabelStyle(color: color)
+        ColoredIconLabelStyle(color)
     }
 }
