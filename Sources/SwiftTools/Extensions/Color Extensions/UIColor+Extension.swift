@@ -9,8 +9,8 @@ import UIKit
 
 
 public extension UIColor {
-    //Example: static let messageSender = UIColor(hex: "#508392ff")
-    //Last two values represent an alpha value
+    ///Example: static let messageSender = UIColor(hex: "#508392ff")
+    ///Last two values represent an alpha value
     convenience init(hex: String){
         var hex = hex
         
@@ -43,6 +43,10 @@ public extension UIColor {
         return self.adjust(by: -1 * abs(percentage) )
     }
     
+    func toData() -> Data {
+        return try! NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
+    }
+    
     static func random(alpha: CGFloat = 1.0)->UIColor{
         let r = CGFloat.random(in: 0...1)
         let g = CGFloat.random(in: 0...1)
@@ -51,14 +55,10 @@ public extension UIColor {
         return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
     
-    
     static func fromData(_ data:Data) -> UIColor {
         return try! NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: data)!
     }
     
-    func toData() -> Data {
-        return try! NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: false)
-    }
     
     //MARK: - Helpers
     private func adjust(by percentage: CGFloat = 30.0) -> UIColor {
