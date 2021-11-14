@@ -5,9 +5,9 @@
         "package": "SFSymbols",
         "repositoryURL": "https://github.com/Rspoon3/SFSymbols.git",
         "state": {
-          "branch": null,
-          "revision": "5f5b1d98d686d0882fc4178e3bfcc3e25b6e1516",
-          "version": "1.0.3"
+          "branch": "release-1.1.0",
+          "revision": "4decd9842c4a0066532a292b24e0d05e2e7971b3",
+          "version": null
         }
       }
     ]
