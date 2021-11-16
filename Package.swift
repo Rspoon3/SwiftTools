@@ -19,7 +19,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         
-        .package(name: "SFSymbols", url: "https://github.com/Rspoon3/SFSymbols.git", branch: "release-1.1.0"),
+        .package(name: "SFSymbols", url: "https://github.com/Rspoon3/SFSymbols.git", branch: "release-2.0.0"),
         
     ],
     targets: [
