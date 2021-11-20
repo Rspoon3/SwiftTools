@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-extension BinaryInteger {
+public extension BinaryInteger {
     var digits: [Int] {
         return String(describing: self).compactMap { Int(String($0)) }
     }
