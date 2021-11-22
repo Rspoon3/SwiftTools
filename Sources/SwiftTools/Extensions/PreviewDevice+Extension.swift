@@ -31,11 +31,11 @@ extension PreviewDevice: Hashable, Identifiable{
     public static let iPhone13Mini   = PreviewDevice(rawValue: "iPhone 13 mini")
     
     //MARK: - iPod Touch
-    public static let iPodTouch = PreviewDevice(rawValue: "iPod Touch (7th generation)")
+    public static let iPodTouch = PreviewDevice(rawValue: "iPod touch (7th generation)")
     
     //MARK: - iPad
     public static let iPad     = PreviewDevice(rawValue: "iPad (9th generation)")
-    public static let iPadMini = PreviewDevice(rawValue: "iPad Mini (6th generation)")
+    public static let iPadMini = PreviewDevice(rawValue: "iPad mini (6th generation)")
     public static let iPadAir  = PreviewDevice(rawValue: "iPad Air (4th generation)")
     public static let iPadPro  = PreviewDevice(rawValue: "iPad Pro (9.7-inch)")
     public static let iPad11   = PreviewDevice(rawValue: "iPad Pro (11-inch) (3rd generation)")
