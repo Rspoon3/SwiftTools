@@ -22,4 +22,12 @@ extension URLComponents{
             self.queryItems = [queryItem]
         }
     }
+    
+    public init?(scheme: String? = nil, host: String? = nil, path: String, query: String? = nil){
+        self.init()
+        self.scheme = scheme
+        self.host = host
+        self.path = path
+        self.query = query
+    }
 }
