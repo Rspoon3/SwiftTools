@@ -15,7 +15,7 @@ public extension UIApplication {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
-    @available(iOS 14.0, *)
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
     func requestReview(delay: Int?){
         #if DEBUG
         return

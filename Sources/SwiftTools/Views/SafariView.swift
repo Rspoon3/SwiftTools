@@ -9,7 +9,7 @@
 import SwiftUI
 import SafariServices
 
-
+#if !os(visionOS)
 public struct SafariView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     private let url: URL
@@ -45,9 +45,4 @@ public struct SafariView: UIViewControllerRepresentable {
         }
     }
 }
-
-//struct SafariView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SafariView(url: .twitter(username: "Rspoon3"))
-//    }
-//}
+#endif
