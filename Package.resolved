@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Rspoon3/SFSymbols.git",
       "state" : {
-        "revision" : "d3b0fc32d67cadb87f38d3834f51eff89f733e35",
-        "version" : "2.4.0"
+        "revision" : "131fb43a7d756259706abc73186ca45eca6ce21a",
+        "version" : "2.5.0"
       }
     }
   ],
