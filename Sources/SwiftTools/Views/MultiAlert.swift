@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
 public enum MultiAlert: Identifiable {
     case nonActionable(title: String, message: String, cancelAction: (()->Void)? = nil)
     case nonActionableError(_ error: Error, completion: (()->Void)? = nil)

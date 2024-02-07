@@ -58,14 +58,14 @@ public extension Color{
         return Color(.random(alpha: opacity))
     }
     
-    @available(iOS 14.0, *)
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
     func lighter(by percentage: CGFloat = 30.0) -> Color {
         let uiColor = UIColor(self)
         let adjustedColor = uiColor.lighter(by: percentage)
         return Color(adjustedColor)
     }
     
-    @available(iOS 14.0, *)
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
     func darker(by percentage: CGFloat = 30.0) -> Color {
         let uiColor = UIColor(self)
         let adjustedColor = uiColor.darker(by: percentage)

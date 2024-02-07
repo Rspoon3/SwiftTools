@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
 public struct CopyButton: View {
     let text: String
     
@@ -22,9 +22,9 @@ public struct CopyButton: View {
     }
 }
 
-//@available(iOS 14.0, *)
-//struct CopyButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CopyButton(text: "This is the sentence too copy to the pasteboard.")
-//    }
-//}
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
+struct CopyButton_Previews: PreviewProvider {
+    static var previews: some View {
+        CopyButton(text: "This is the sentence too copy to the pasteboard.")
+    }
+}

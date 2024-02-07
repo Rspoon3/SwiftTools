@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "SFSymbols",
-        "repositoryURL": "https://github.com/Rspoon3/SFSymbols.git",
-        "state": {
-          "branch": "release-2.0.0",
-          "revision": "313dd471fcf412322a7731259936ea7cdd4dc0a8",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "sfsymbols",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Rspoon3/SFSymbols.git",
+      "state" : {
+        "revision" : "131fb43a7d756259706abc73186ca45eca6ce21a",
+        "version" : "2.5.0"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

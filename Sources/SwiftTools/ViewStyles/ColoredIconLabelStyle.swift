@@ -10,7 +10,7 @@ import SwiftUI
 
 ///Tints the icon to the specified color
 ///- Authors: Richard Witherspoon
-@available(iOS 14.0, *)
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
 public struct ColoredIconLabelStyle: LabelStyle {
     let color: Color
     
@@ -31,7 +31,7 @@ public struct ColoredIconLabelStyle: LabelStyle {
 
 ///Tints the icon to the specified color
 ///- Authors: Richard Witherspoon
-@available(iOS 14.0, *)
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, visionOS 1.0, *)
 public extension LabelStyle where Self == ColoredIconLabelStyle {
     static func coloredIcon(_ color: Color) -> ColoredIconLabelStyle {
         ColoredIconLabelStyle(color)
