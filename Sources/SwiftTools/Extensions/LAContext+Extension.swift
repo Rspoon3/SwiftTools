@@ -15,6 +15,7 @@ public extension LAContext {
         case none
         case touchID = "Touch ID"
         case faceID  = "Face ID"
+        case opticID = "Optic ID"
         case unknown
         case cantEvaluate
     }
@@ -32,13 +33,15 @@ public extension LAContext {
             return .touchID
         case .faceID:
             return .faceID
+        case .opticID:
+            return .opticID
         @unknown default:
             return .unknown
         }
     }
     
     @available(iOS 14, *)
-    var symbol: SFSymbol{
+    var symbol: SFSymbol {
         switch biometricType {
         case .none, .cantEvaluate:
             return .exclamationmark
@@ -46,6 +49,8 @@ public extension LAContext {
             return .touchid
         case .faceID:
             return .faceid
+        case .opticID:
+            fatalError() // TODO: Add opticID
         case .unknown:
             return .questionmark
         }
