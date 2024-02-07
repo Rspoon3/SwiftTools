@@ -7,7 +7,6 @@ let package = Package(
     name: "SwiftTools",
     platforms: [
         .iOS(.v13),
-        .macOS(.v11),
         .visionOS(.v1)
     ],
     products: [
